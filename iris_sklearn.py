@@ -58,13 +58,13 @@ f2 = open('./outputs/model.pkl', 'rb')
 clf2 = pickle.load(f2)
 
 # predict a new sample
-X_new = [[3.0, 3.6, 1.3, 0.25]]
+X_new = np.array([[3.0, 3.6, 1.3, 0.25]])
 print ('New sample: {}'.format(X_new))
 pred = clf2.predict(X_new)
 print('Predicted class is {}'.format(pred))
 
 print(X[0:10,:])
 print(X[100])
-print(Y[0:50])
-print(Y[100])
+print(X[65])
+print(Y[65])
 
