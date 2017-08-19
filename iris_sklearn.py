@@ -25,6 +25,8 @@ print ('Iris dataset shape: {}'.format(iris.data.shape))
 # load features and labels
 X, Y = iris.data, iris.target
 
+X = np.array(X)
+Y = np.array(Y)
 # change regularization rate and you will likely get a different accuracy.
 reg = 0.01
 # load regularization rate from argument if present
@@ -62,9 +64,4 @@ X_new = np.array([[3.0, 3.6, 1.3, 0.25]])
 print ('New sample: {}'.format(X_new))
 pred = clf2.predict(X_new)
 print('Predicted class is {}'.format(pred))
-
-print(X[0:10,:])
-print(X[100])
-print(X[65])
-print(Y[65])
 

@@ -16,8 +16,9 @@ def init():
 
 def run(npa):
     global clf2
-    
+    print(npa.shape)
     pred = clf2.predict(npa)
+    
     retdf = pd.DataFrame(data={"Scored Labels":np.squeeze(np.reshape(pred, newshape= [-1,1]), axis=1)})
     return str(retdf)
 
